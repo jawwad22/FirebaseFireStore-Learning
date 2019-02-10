@@ -24,7 +24,7 @@ cross.addEventListener('click',(e)=>{
 
 }
 //getting data
-db.collection('cafes').get().then((snapshot) =>{
+db.collection('cafes').where('city','==','lahore').get().then((snapshot) =>{
 snapshot.docs.forEach(doc =>{
     renderCafe(doc);
     
